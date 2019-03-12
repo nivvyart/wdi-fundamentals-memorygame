@@ -1,5 +1,5 @@
 // Java Starts here
-console.log("Up and running!") ;
+//console.log("Up and running!") ;
 // Card Identification
 //var cardOne = "queen" ;
 //var cardTwo = "queen" ;
@@ -7,18 +7,50 @@ console.log("Up and running!") ;
 //var cardFour = "king" ;
 var cards = [ "queen" , "queen" , "king" , "king" ] ;
 var cardsInPlay = [] ;
-var cardOne = cards[0];
-cardsInPlay.push('cardOne') ;
-var cardTwo = cards[1];
-cardsInPlay.push('cardTwo') ;
-//Write an if statement that checks to see if the length of the cardsInPlay array is 2. 
-if (cardsInPlay.length === 2 && cardOne === cardTwo) {
-	alert("You found a match!");
-} else {
-	alert("sorry try again :(");
+
+
+//oldcode
+//var cardOne = cards[0];
+//cardsInPlay.push('cardOne') ;
+//var cardTwo = cards[2];
+//cardsInPlay.push('cardTwo') ;
+//ConsoleLog
+//console.log("user flipped" + " " + cardOne) ;
+//console.log("user flipped" + " " + cardTwo) ;
+
+//check for match
+var checkForMatch = function() {
+	if (cardsInPlay[0] === cardsInPlay[1])
+	//if (cardsInPlay.length === 2)
+	{
+	console.log("You found a match!") ;
+	} else {
+  	console.log("Sorry, try again.") ;
+	}
+} ;
+
+
+
+// cardId function to store game steps
+var flipCard = function (cardId){
+console.log("user flipped " + cards[cardId]) ;
+cardsInPlay.push(cards[cardId]);
+if (cardsInPlay.length===2) {
+checkForMatch();
+} 
 }
 
+flipCard(0);
+flipCard(2);
 
-// ConsoleLog
-console.log("user flipped" + " " + cardOne) ;
-console.log("user flipped" + " " + cardTwo) ;
+
+
+
+
+
+
+
+
+
+
+

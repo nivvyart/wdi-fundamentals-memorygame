@@ -78,9 +78,42 @@ for (var i = 0; i < cards.length; i++) {
 createBoard();
 
 
+		//Sams button reset code
+var gameReset = function(){
+    cardsInPlay = [];
+    var allCards = document.getElementById('game-board');
+    allCards.innerHTML = '';
+    createBoard();
+}
+
+var button = document.getElementById('resetGame');
+	button.addEventListener('click', gameReset);
+
+
+/*
+
+//console.log("test")
+	//cardsInPlay.pull(cards[cardId].rank);
+	//if (cardsInPLay.length > 0) {
 
 
 
+//cardsInPlay.pull(cards[cardId].rank)
+
+
+
+
+
+document.getElementById("demo").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+function myFunction() {
+  document.getElementById("field2").value = document.getElementById("field1").value;
+}
+
+*/
 
 
 
